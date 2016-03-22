@@ -60,7 +60,8 @@ public class Parc_attraction
 	}
 
 	public void setPays(Pays pays) {
-		this.pays = pays;
+		if(pays.getName() != "")
+			this.pays = pays;
 	}
 
 	/**

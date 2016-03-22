@@ -70,11 +70,30 @@ public class Parc_attractionTest
     {
         getTestSuperExtractMethod();
     }
+    
+    @Test
+    public void TestChaine2CaracPays(){
+    	Pays p = new Pays();
+    	//Test que le nom du pays n'est pas une chaine vide
+    	assertNotEquals("", p.getNamePays());
+    	//Test du nom du pays qui est constitué de au moins deux caractères
+    	assertEquals(6, p.getNamePays().length());    	
+    }
+    
+    @Test
+    public void TestAssociationPaysNomChaineVide(){
+    	Pays p = new Pays();
+    	Parc_attraction parc = new Parc_attraction();
+    	p.setNamePays("");
+    	parc.setPays(p);
+    	assertEquals(null,parc.getPays());
+    }
 
 	private void getTestSuperExtractMethod() {
 		pays1.setName("France");
         pays1.getListeParc().add(new Parc_attraction());
-     
+        
+        //Association d'un parc à un pays
         assertEquals(2, pays1.getListeParc().size());
     	assertEquals("France", pays1.getName());
     	assertEquals(400, pays1.getNbTotalVisitor());
