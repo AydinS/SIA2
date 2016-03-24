@@ -7,6 +7,8 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import billet.Proprietaire;
+
 /**
  * Write a description of class Parc_attraction here.
  * 
@@ -146,6 +148,10 @@ public class Parc_attraction
     public void setName(String n)
     {
         this.name = n;
+    }
+    
+    public void reduction(int discount){
+    	Proprietaire.communiquerPromotions(this, discount);
     }
 
 }
