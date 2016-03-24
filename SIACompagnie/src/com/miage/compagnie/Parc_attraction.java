@@ -32,8 +32,27 @@ public class Parc_attraction
     private int nb_visitor;
     private String name;
     private Pays pays;
+    private StateParcAttraction etatParc;
+    private int prixEntree;
+    
+    
+    public int getPrixEntree() {
+		return prixEntree;
+	}
 
-    /**
+	public void setPrixEntree(int prixEntree) {
+		this.prixEntree = prixEntree;
+	}
+
+	public StateParcAttraction getEtatParc() {
+		return etatParc;
+	}
+
+	public void setEtatParc(StateParcAttraction etatParc) {
+		this.etatParc = etatParc;
+	}
+
+	/**
      * Constructor for objects of class Parc_attraction
      */
     public Parc_attraction()
@@ -43,6 +62,7 @@ public class Parc_attraction
         nb_entree = 11000;
         nb_visitor = 200;
         name = "Disneyland";
+        prixEntree = 80;
     }
     
     public Parc_attraction(Pays p)
