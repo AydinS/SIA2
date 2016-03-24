@@ -3,6 +3,8 @@ package billet;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.miage.compagnie.Parc_attraction;
+
 
 /**
  * Write a description of class Proprietaire here.
@@ -42,6 +44,10 @@ public class Proprietaire
             uneListeDeBillet.add(unBillet);
     	}
         return valeurTotal;
+    }
+    
+    public static void communiquerPromotions(Parc_attraction parc, int discount){
+    	System.out.println(""+parc.getName()+" annonce une promotion de: "+discount+"%");
     }
     
 }
