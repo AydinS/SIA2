@@ -15,6 +15,7 @@ public class Main {
 		
 		disney.setEtatParc(new StateParcOuvert());
 		asterix.setEtatParc(new StateParcFerme());
+		////tuto tag
 		disney.getEtatParc().gererParcAttraction(disney);
 		asterix.getEtatParc().gererParcAttraction(asterix);
 	}
